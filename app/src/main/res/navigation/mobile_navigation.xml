@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.uccitmobileapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/nav_faculty"
+        android:name="com.example.uccitmobileapp.FacultyDirectoryFragment"
+        android:label="@string/menu_faculty"
+        tools:layout="@layout/fragment_faculty_directory" />
+
+    <fragment
+        android:id="@+id/nav_courses"
+        android:name="com.example.uccitmobileapp.CoursesFragment"
+        android:label="@string/menu_courses"
+        tools:layout="@layout/fragment_courses" />
+
+    <fragment
+        android:id="@+id/nav_admissions"
+        android:name="com.example.uccitmobileapp.AdmissionsFragment"
+        android:label="@string/menu_admissions"
+        tools:layout="@layout/fragment_admission" />
+
+    <fragment
+        android:id="@+id/nav_social"
+        android:name="com.example.uccitmobileapp.ui.home.SocialMediaFragment"
+        android:label="@string/menu_social"
+        tools:layout="@layout/fragment_social_media" />
+
+
+
+
+</navigation>
