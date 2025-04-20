@@ -10,19 +10,23 @@ import androidx.recyclerview.widget.RecyclerView
 
 class FacultyDirectoryFragment : Fragment() {
 
+    //Variables for the RecyclerView for the Faculty Adapter and the list of faculty members
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: FacultyAdapter
     private lateinit var facultyList: List<FacultyModel>
 
+    //This method is used to setup the fragment's user interface
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_faculty_directory, container, false)
 
+        //Initialize the RecyclerView and set the layout manager
         recyclerView = view.findViewById(R.id.recyclerViewFaculty)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        //To populate the facultyList with instances of FacultyModel containing their details
         facultyList = listOf(
             FacultyModel("Dr. Jane Smith", "jane@ucc.edu.jm", "876-675-1234", R.drawable.pfp_icon),
             FacultyModel("Mr. John Brown", "john@ucc.edu.jm", "876-555-5678", R.drawable.pfp_icon),
@@ -50,6 +54,7 @@ class FacultyDirectoryFragment : Fragment() {
 
         )
 
+        //To display the faculty list
         adapter = FacultyAdapter(facultyList)
         recyclerView.adapter = adapter
 
