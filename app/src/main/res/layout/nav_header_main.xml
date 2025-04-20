@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<--LinearLayout serves as the parent container with a vertical orientation and styling to match the app's theme. It takes up full width and uses a custom height
+    -ImageView displays an image with specific width and height. The content description provides accessibility support and drawable resource is used as the source
+    -TextView displays title with text and bold styling. Text is sourced from a string
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
