@@ -11,7 +11,7 @@ import com.example.uccitmobileapp.R
 class TikTokFragment : Fragment(R.layout.fragment_tiktok) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val webView: WebView = view.findViewById(R.id.tiktokWebView)
-        //To handle loading of the webpage within the app, improve web functionality using Javascript and to load the UCC webpages
+        //To handle loading of the webpage within the app, improve web functionality using Javascript and to load the UCC Tiktok webpages
         webView.webViewClient = WebViewClient()
         webView.settings.javaScriptEnabled = true
         webView.loadUrl("https://www.tiktok.com/@uccjamaica")
