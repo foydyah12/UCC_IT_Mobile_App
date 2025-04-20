@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- the fragment_home.xml layout is used in the HomeFragment to display a scrollable list of course items using a RecyclerView.
+    The ConstraintLayout ensures the RecyclerView fills the entire screen. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:gravity="center"
