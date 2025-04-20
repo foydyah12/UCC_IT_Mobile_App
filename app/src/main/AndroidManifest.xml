@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- The internet permission was added because it is required for loading web content (e.g., WebView for social media pages) -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <queries>
