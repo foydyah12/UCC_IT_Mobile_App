@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- This layout defines a simple full-screen container for displaying the UCC Jamaica Instagram page
+    using a WebView component. The WebView fills the entire screen space and is managed by
+    the corresponding InstagramFragment class. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
