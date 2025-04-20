@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    This layout file displays the admissions information for UCC.
+    It uses a ScrollView to allow vertical scrolling if the content is long.
+    Inside the ScrollView, a vertical LinearLayout holds several TextViews:
+    - Title for admissions requirements
+    - Detailed admissions info
+    - A bold clickable "Apply Online" link
+    - Info for international students with another clickable link
+-->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
