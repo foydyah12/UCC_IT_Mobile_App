@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    This layout defines a single item view for each course displayed in the Courses list.
+    It will be used inside a RecyclerView to show:
+    - Course Code (e.g., ITT101)
+    - Course Name (e.g., Intro to IT)
+    - Credit Hours (e.g., 3)
+    - Prerequisites (e.g., None or another course)
+    - Course Description (brief overview of what the course covers)
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
