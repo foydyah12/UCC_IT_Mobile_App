@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- the fragment_faculty_directory.xml layout is used in the FacultyDirectoryFragment to display a scrollable list of course items using a RecyclerView.
+    The ConstraintLayout ensures the RecyclerView fills the entire screen. -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
