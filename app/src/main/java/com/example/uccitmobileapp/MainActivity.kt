@@ -23,22 +23,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawerLayout: DrawerLayout
 
+    //Called when the activity is created
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Setup the toolbar as the activity's action bar
         setSupportActionBar(binding.appBarMain.toolbar)
 
         drawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
 
-
+//Obtain the navigationController to manage fragments navigation
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController = navHostFragment.navController
 
+        //Define top-level destinations that should not display the "up" button
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home,
@@ -50,28 +53,32 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             drawerLayout
         )
 
+        //Setup the action bar witht eh navigation controller and bind NavigationView to work with the navigation controller
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
         navView.setNavigationItemSelectedListener(this)
 
-        // FAB sends email
+        // Setup the Floating Action Button (FAB) to send an email
         binding.appBarMain.fab.setOnClickListener { view ->
             sendEmailToHOD(view)
         }
     }
 
+    //Inflate menu for Action Bar
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
 
+    //Handle the "up" button navigation
     override fun onSupportNavigateUp(): Boolean {
         val navController = (supportFragmentManager
             .findFragmentById(R.id.navHostFragment) as NavHostFragment).navController
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    //Navigation item selection
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val navController = (supportFragmentManager
             .findFragmentById(R.id.navHostFragment) as NavHostFragment).navController
@@ -92,6 +99,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    //Function to send an email to th Head of Department (HOD)
     private fun sendEmailToHOD(view: android.view.View) {
         val intent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse("mailto:hod@ucc.edu.jm")
@@ -103,7 +111,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             Snackbar.make(view, "No email app found.", Snackbar.LENGTH_SHORT).show()
         }
     }
-
+//Function to open an external link in the browser
     private fun openExternalLink(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         if (intent.resolveActivity(packageManager) != null) {
