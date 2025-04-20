@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
+// this defines the admissionsfragment
 class AdmissionsFragment : Fragment() {
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
