@@ -2,32 +2,38 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-<!-- Here is the navigation drawer menu which is located on the left side of the screen, what this xml does 
-    it defines the items shown in the drawer panel. -->
+<!-- Here is the navigation drawer menu which is located on the left side of the screen. What this XML does 
+    is define the items shown in the drawer panel. Therefore, each item represents a clickable option
+    for users to navigate to their desired screen. -->
+
+    <!-- The Home Section -->
     <item
         android:id="@+id/nav_home"
         android:title="@string/menu_home"
-        android:icon="@drawable/ic_home" />
-
+        android:icon="@drawable/ic_home" /> <!-- The home icon to represent home -->
+    
+    <!-- The Faculty/Staff Directory Section -->
     <item
         android:id="@+id/nav_faculty"
         android:title="@string/menu_faculty"
-        android:icon="@drawable/ic_people" />
-
+        android:icon="@drawable/ic_people" /> <!-- The people icon to represent each staff member in the directory -->
+    
+    <!-- The Courses Section -->
     <item
         android:id="@+id/nav_courses"
         android:title="@string/menu_courses"
-        android:icon="@drawable/ic_book" />
-
+        android:icon="@drawable/ic_book" /> <!-- The book icon to represent the course list -->
+    
+    <!-- The Admissions Section -->
     <item
         android:id="@+id/nav_admissions"
         android:title="@string/menu_admissions"
-        android:icon="@drawable/ic_school" />
-
+        android:icon="@drawable/ic_school" /> <!-- The school icon to represent the admissions section -->
+    
+    <!-- The Social Media Section -->
     <item
         android:id="@+id/nav_social"
         android:title="@string/menu_social"
-        android:icon="@drawable/ic_public" />
-
+        android:icon="@drawable/ic_public" /> <!-- The phone icon to represent social media -->
 
 </menu>
