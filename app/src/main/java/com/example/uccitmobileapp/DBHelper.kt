@@ -5,10 +5,13 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+// This class is a helper for managing the database of UCC courses.
 class DBHelper(context: Context) : SQLiteOpenHelper(context, "ucc_courses.db", null, 2) {
 
+    //Name of the table storing course information
     private val tableCourses = "courses"
 
+    // This method is called when the database is created and to create courses table
     override fun onCreate(db: SQLiteDatabase) {
         val createTable = """
             CREATE TABLE IF NOT EXISTS $tableCourses (
@@ -20,10 +23,15 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "ucc_courses.db", n
                 description TEXT
             )
         """.trimIndent()
+
+        // Execute the SQL statement to create the table
         db.execSQL(createTable)
+
+        // Populate the table with the initial course data
         insertInitialCourses(db)
     }
 
+    // Inserts courses data into the course table
     private fun insertInitialCourses(db: SQLiteDatabase) {
         val courses = listOf(
             CourseModel("ITT101", "Intro to IT", 3, "None", "An introductory course covering the fundamental principles, components, and operations of information technology systems."),
@@ -38,6 +46,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "ucc_courses.db", n
             CourseModel("ITT305", "Cloud Computing", 3, "ITT202", "Introduces cloud computing concepts, service models, and platforms, including deployment and management of cloud resources.")
         )
 
+        //Loop through the lists aof courses and to insert into the database
         for (course in courses) {
             val values = ContentValues().apply {
                 put("code", course.code)
@@ -50,16 +59,19 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "ucc_courses.db", n
         }
     }
 
+    // This method calls the database when it upgrades to the new version
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $tableCourses")
         onCreate(db)
     }
 
+    //Retrieves all courses from the database and returns them as a list of CourseModel objects
     fun getAllCourses(): List<CourseModel> {
         val courseList = mutableListOf<CourseModel>()
         val db = readableDatabase
         val cursor = db.rawQuery("SELECT * FROM $tableCourses", null)
 
+        //Check if the cursor contains any rows
         if (cursor.moveToFirst()) {
             do {
                 val code = cursor.getString(cursor.getColumnIndexOrThrow("code"))
@@ -68,6 +80,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "ucc_courses.db", n
                 val prereqs = cursor.getString(cursor.getColumnIndexOrThrow("prerequisites"))
                 val description = cursor.getString(cursor.getColumnIndexOrThrow("description"))
 
+                //Add the course to the list
                 courseList.add(CourseModel(code, name, credits, prereqs, description))
             } while (cursor.moveToNext())
         }
