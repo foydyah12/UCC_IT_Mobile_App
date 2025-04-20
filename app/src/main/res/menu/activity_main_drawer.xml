@@ -2,7 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
+<!-- Here is the navigation drawer menu which is located on the left side of the screen, what this xml does 
+    it defines the items shown in the drawer panel. -->
     <item
         android:id="@+id/nav_home"
         android:title="@string/menu_home"
