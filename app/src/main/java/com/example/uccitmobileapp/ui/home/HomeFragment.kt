@@ -7,6 +7,7 @@ package com.example.uccitmobileapp.ui.home
     import androidx.fragment.app.Fragment
     import com.example.uccitmobileapp.R
 
+//This fragment represents the home screen of the app
 class HomeFragment : Fragment() {
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
