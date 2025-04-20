@@ -1,42 +1,63 @@
 <resources>
+    <!-- The App Name -->
     <string name="app_name">UCC IT Mobile App</string>
+    
+    <!-- This is an accessibility text for opening and closing the navigation drawer -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <!-- This is the navigation drawer header details, which includes
+    a placeholder for the username, the institution, etc-->
     <string name="nav_header_title">User</string>
     <string name="nav_header_subtitle">University of The\nCommonwealth Caribbean</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    
+    <!-- These are all the drawer menu items that you choose from to lead you to the page you desire -->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="credits_format">Credits: %1$d</string>
-    <string name="prerequisites_format">Prerequisites: %1$s</string>
-    <string name="email_hod_description">Email HOD</string>
-    <string name="admissions_requirements">Admissions Requirements</string>
-    <string name="admissions_info">To be unconditionally admitted to complete UCC undergraduate programmes, individuals should possess a minimum of five (5) subjects at the GCE or CSEC level (including the mandatory English Language and Mathematics) at grades A, B, C or 1, 2, 3 respectively. A CSEC pass at level 3 must have been obtained since 1998.\n\nCandidates who have a minimum of 4 CXCs can also apply pending the outstanding CXC subjects or can opt to do UCC replacement courses Core Mathematics, English for Academic Purpose and Fundamentals of Accounting.\n\nCandidates can opt to apply under the Mature Entry option. To be accepted, applicants must be working for 5 years or more and be at a minimum age of 25 years. Academic qualifications, a detailed resume, a job letter and 3 professional references will be required.</string>
-    <string name="apply_online">Apply Online</string>
-    <string name="international">\nTo view admission requirements for international students, click here:</string>
-    <string name="click_here">Click Here</string>
-    <string name="welcome_to_ucc">Welcome to UCC</string>
-    <string name="facebook">Facebook</string>
-    <string name="tiktok">Tik Tok</string>
-    <string name="instagram">Instagram</string>
-    <string name="twitter">Twitter</string>
-    <string name="course_code">ITTI101</string>
-    <string name="course_name">Intro to IT</string>
-    <string name="course_credits">Credits: 3</string>
-    <string name="course_prerequisites">Prerequisites: None</string>
-    <string name="course_description">Basic introduction to IT systems</string>
-    <string name="faculty_photo">Faculty Photo</string>
-    <string name="faculty_name">Faculty Name</string>
-    <string name="faculty_email">email@example.com</string>
-    <string name="faculty_phone">(876)123-4567</string>
     <string name="menu_faculty">Faculty/Staff Directory</string>
     <string name="menu_courses">Courses</string>
     <string name="menu_admissions">Admissions</string>
     <string name="menu_social">Social Media</string>
     <string name="menu_email">Email</string>
-    <string name="social_media_tabs">Social media platform navigation tabs</string>
+    
+    <!-- This is the display format for the course information -->
+    <string name="credits_format">Credits: %1$d</string>
+    <string name="prerequisites_format">Prerequisites: %1$s</string>
+    
+    <!-- This is the floating action button description for emailing the hod-->
+    <string name="email_hod_description">Email HOD</string>
 
+    <!-- This is the display format for the admission information, which also includes
+    information for international students and the clickable link text for online application, and click here -->
+    <string name="admissions_requirements">Admissions Requirements</string>
+    <string name="admissions_info">To be unconditionally admitted to complete UCC undergraduate programmes, individuals should possess a minimum of five (5) subjects at the GCE or CSEC level (including the mandatory English Language and Mathematics) at grades A, B, C or 1, 2, 3 respectively. A CSEC pass at level 3 must have been obtained since 1998.\n\nCandidates who have a minimum of 4 CXCs can also apply pending the outstanding CXC subjects or can opt to do UCC replacement courses Core Mathematics, English for Academic Purpose and Fundamentals of Accounting.\n\nCandidates can opt to apply under the Mature Entry option. To be accepted, applicants must be working for 5 years or more and be at a minimum age of 25 years. Academic qualifications, a detailed resume, a job letter and 3 professional references will be required.</string>
+    <string name="apply_online">Apply Online</string>
+    <string name="international">\nTo view admission requirements for international students, click here:</string>
+    <string name="click_here">Click Here</string>
+
+    <!-- The greeting text on the homepage -->
+    <string name="welcome_to_ucc">Welcome to UCC</string>
+
+    <!-- All the social media tab titles -->
+    <string name="facebook">Facebook</string>
+    <string name="tiktok">Tik Tok</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+     <string name="social_media_tabs">Social media platform navigation tabs</string>
+    
+    <!-- All the course details -->
+    <string name="course_code">ITTI101</string>
+    <string name="course_name">Intro to IT</string>
+    <string name="course_credits">Credits: 3</string>
+    <string name="course_prerequisites">Prerequisites: None</string>
+    <string name="course_description">Basic introduction to IT systems</string>
+
+    <!-- These are the default placeholders for the faculty cards -->
+    <string name="faculty_photo">Faculty Photo</string>
+    <string name="faculty_name">Faculty Name</string>
+    <string name="faculty_email">email@example.com</string>
+    <string name="faculty_phone">(876)123-4567</string>
 </resources>
