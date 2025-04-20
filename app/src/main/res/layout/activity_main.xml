@@ -18,7 +18,7 @@ along with the main content area.-->
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
     
- <!-- This is the left-side menu that slides out. Which displays the items (like Home, Courses, Faculty) 
+ <!-- This is the left-side menu that slides out. Which displays the items (Home, Courses, Faculty, etc.) 
     that are pulled from activity_main_drawer.xml. The top part of the drawer (with logo/user info) 
     is designed in nav_header_main.xml and is also included. -->
     <com.google.android.material.navigation.NavigationView
