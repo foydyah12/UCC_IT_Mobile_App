@@ -17,17 +17,18 @@ class SocialMediaFragment : Fragment(R.layout.fragment_social_media) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Initialize TabLayout and ViewPager2
         tabLayout = view.findViewById(R.id.tabLayout)
         viewPager = view.findViewById(R.id.viewPager)
 
-        // Setup ViewPager with adapter
+        // Setup ViewPager with adapter to manage pages
         val adapter = SocialMediaPagerAdapter(this)
         viewPager.adapter = adapter
 
-        // Tab titles in order
+        // Tab titles for the social media platform
         val tabTitles = listOf("Instagram", "Facebook", "TikTok", "Twitter")
 
-        // Attach TabLayout with ViewPager2
+        // Attach TabLayout with ViewPager2 using TabLayoutMediator
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()
