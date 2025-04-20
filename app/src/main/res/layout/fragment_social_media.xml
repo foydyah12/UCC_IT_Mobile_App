@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    This layout is used in the SocialMediaFragment.
+    It contains:
+    - A TabLayout to switch between social media platforms (Instagram, Facebook, TikTok, Twitter).
+    - A ViewPager2 to display each platform's content as a separate page.
+    - A WebView to optionally load external web content (if used).
+    The layout uses vertical orientation to stack these components from top to bottom.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/socialMediaLayout"
